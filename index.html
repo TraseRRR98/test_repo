@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot UI - Toggle Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Toggle Menu Area with Integrated Buttons -->
+        <div class="toggle-menu-area">
+            <!-- Toggle Buttons in Header -->
+            <div class="menu-header-with-toggles">
+                <div class="toggle-buttons">
+                    <button class="toggle-btn active" data-menu="incorrect">
+                        <span class="icon">❌</span>
+                        <span class="label">Incorrect Questions</span>
+                    </button>
+                    <button class="toggle-btn" data-menu="history">
+                        <span class="icon">💬</span>
+                        <span class="label">Chat History</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Incorrect Questions Menu -->
+            <div class="menu-panel active" id="incorrect-menu">
+                <div class="menu-header">
+                    <h2>Incorrectly Answered Questions</h2>
+                    <span class="badge" id="incorrect-count">0</span>
+                </div>
+                <div class="menu-content" id="incorrect-questions-list">
+                    <!-- Questions will be dynamically added here -->
+                </div>
+            </div>
+
+            <!-- Chat History Menu -->
+            <div class="menu-panel" id="history-menu">
+                <div class="menu-header">
+                    <h2>Chat History</h2>
+                    <span class="badge" id="history-count">0</span>
+                </div>
+                <div class="menu-content" id="chat-history-list">
+                    <!-- Chat history will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Main Chat Interface -->
+        <div class="chat-interface">
+            <div class="chat-header">
+                <h2>Chat Assistant</h2>
+                <span class="chat-status">Online</span>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Chat messages will be dynamically added here -->
+            </div>
+            <form class="chat-input-form" id="chat-form">
+                <input type="text" id="user-input" class="chat-input" placeholder="Type your message..." autocomplete="off" required>
+                <button type="submit" class="chat-send-btn">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
